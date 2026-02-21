@@ -51,11 +51,12 @@ test.describe('Admin Create Note — happy path', () => {
     await saveButton.click();
 
     // Wait for navigation to the edit page (success redirect)
-    await page.waitForURL(/\/admin\/entities\/[a-z0-9]+/, { timeout: 10000 });
+    // Use negative lookahead to avoid matching the current /entities/new URL
+    await page.waitForURL(/\/admin\/entities\/(?!new)[a-z0-9]+/, { timeout: 10000 });
 
     // Extract the entity ID from the URL
     const url = page.url();
-    const idMatch = url.match(/\/entities\/([a-z0-9]+)$/);
+    const idMatch = url.match(/\/entities\/(?!new)([a-z0-9]+)$/);
     expect(idMatch).toBeTruthy();
     const entityId = idMatch![1];
 
