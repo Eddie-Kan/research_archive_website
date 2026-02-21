@@ -67,18 +67,20 @@ test.describe('Admin Create Note — happy path', () => {
       return res.json();
     }, entityId);
 
-    // Verify auto-populated defaults
-    expect(entity.type).toBe('note');
-    expect(entity.status).toBe('active');
-    expect(entity.visibility).toBe('private');
+    // The API returns a DB row; nested fields live in raw_metadata JSON
+    const meta = entity.raw_metadata ? JSON.parse(entity.raw_metadata) : entity;
 
-    // These are the fields that previously caused validation failures
-    // They should now be auto-populated by applyEntityDefaults
-    expect(entity.links).toEqual([]);
-    expect(entity.authorship).toBeDefined();
-    expect(entity.authorship.contributors).toEqual([]);
-    expect(entity.related_entities).toEqual([]);
-    expect(entity.body_mdx_id).toBe(`${entityId}.body`);
+    // Verify auto-populated defaults
+    expect(meta.type).toBe('note');
+    expect(meta.status).toBe('active');
+    expect(meta.visibility).toBe('private');
+
+    // These fields are auto-populated by applyEntityDefaults
+    expect(meta.links).toEqual([]);
+    expect(meta.authorship).toBeDefined();
+    expect(meta.authorship.contributors).toEqual([]);
+    expect(meta.related_entities).toEqual([]);
+    expect(meta.body_mdx_id).toBe(`${entityId}.body`);
 
     // Clean up: delete the test entity
     await page.evaluate(async (id) => {
