@@ -7,8 +7,6 @@ import { test, expect } from '@playwright/test';
  */
 
 test.describe('Admin Create Note — happy path', () => {
-  let sessionCookie: string | undefined;
-
   test.beforeEach(async ({ page }) => {
     await page.request.post('/api/admin/auth/setup', {
       data: { password: process.env.ADMIN_PASSWORD || 'test123' },
@@ -21,7 +19,6 @@ test.describe('Admin Create Note — happy path', () => {
       if (cookies) {
         const match = cookies.match(/ek-admin-session=([^;]+)/);
         if (match) {
-          sessionCookie = match[1];
           await page.context().addCookies([{
             name: 'ek-admin-session',
             value: match[1],
@@ -33,7 +30,7 @@ test.describe('Admin Create Note — happy path', () => {
     }
   });
 
-  test('create a note with minimal fields and verify defaults', async ({ page, request }) => {
+  test('create a note with minimal fields and verify defaults', async ({ page }) => {
     await page.goto('/en/admin/entities/new', { waitUntil: 'networkidle' });
 
     // Type should default to "note" — verify
@@ -63,9 +60,7 @@ test.describe('Admin Create Note — happy path', () => {
     const entityId = idMatch![1];
 
     // Fetch the entity via API and verify defaults were applied
-    const entityRes = await request.get(`/api/admin/entities/${entityId}`, {
-      headers: sessionCookie ? { Cookie: `ek-admin-session=${sessionCookie}` } : {},
-    });
+    const entityRes = await page.request.get(`/api/admin/entities/${entityId}`);
     expect(entityRes.ok()).toBe(true);
 
     const entity = await entityRes.json();
@@ -84,8 +79,6 @@ test.describe('Admin Create Note — happy path', () => {
     expect(entity.body_mdx_id).toBe(`${entityId}.body`);
 
     // Clean up: delete the test entity
-    await request.delete(`/api/admin/entities/${entityId}`, {
-      headers: sessionCookie ? { Cookie: `ek-admin-session=${sessionCookie}` } : {},
-    });
+    await page.request.delete(`/api/admin/entities/${entityId}`);
   });
 });
