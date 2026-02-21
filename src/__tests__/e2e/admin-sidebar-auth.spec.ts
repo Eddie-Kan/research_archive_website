@@ -58,6 +58,9 @@ test.describe('Sidebar auth visibility — logged out', () => {
 
 test.describe('Sidebar auth visibility — logged in', () => {
   test.beforeEach(async ({ page }) => {
+    await page.request.post('/api/admin/auth/setup', {
+      data: { password: process.env.ADMIN_PASSWORD || 'test123' },
+    });
     const res = await page.request.post('/api/admin/auth', {
       data: { password: process.env.ADMIN_PASSWORD || 'test123' },
     });

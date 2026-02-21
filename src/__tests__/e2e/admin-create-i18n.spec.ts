@@ -44,7 +44,10 @@ test.describe('Admin Create Entity — zh-Hans i18n', () => {
   // This test requires the user to be authenticated.
   // In CI, set up auth via the API before running.
   test.beforeEach(async ({ page }) => {
-    // Attempt login via API (skip if already authenticated)
+    // Ensure password is configured (idempotent — 403 if already set)
+    await page.request.post('/api/admin/auth/setup', {
+      data: { password: process.env.ADMIN_PASSWORD || 'test123' },
+    });
     const res = await page.request.post('/api/admin/auth', {
       data: { password: process.env.ADMIN_PASSWORD || 'test123' },
     });

@@ -10,6 +10,9 @@ test.describe('Admin Create Note — happy path', () => {
   let sessionCookie: string | undefined;
 
   test.beforeEach(async ({ page }) => {
+    await page.request.post('/api/admin/auth/setup', {
+      data: { password: process.env.ADMIN_PASSWORD || 'test123' },
+    });
     const res = await page.request.post('/api/admin/auth', {
       data: { password: process.env.ADMIN_PASSWORD || 'test123' },
     });

@@ -7,6 +7,9 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Admin Dashboard — stats display', () => {
   test.beforeEach(async ({ page }) => {
+    await page.request.post('/api/admin/auth/setup', {
+      data: { password: process.env.ADMIN_PASSWORD || 'test123' },
+    });
     const res = await page.request.post('/api/admin/auth', {
       data: { password: process.env.ADMIN_PASSWORD || 'test123' },
     });

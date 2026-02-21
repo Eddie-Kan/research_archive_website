@@ -12,6 +12,9 @@ const RAW_EDGE_TOKENS = [
 
 test.describe('Edge type localization — zh-Hans', () => {
   test.beforeEach(async ({ page }) => {
+    await page.request.post('/api/admin/auth/setup', {
+      data: { password: process.env.ADMIN_PASSWORD || 'test123' },
+    });
     const res = await page.request.post('/api/admin/auth', {
       data: { password: process.env.ADMIN_PASSWORD || 'test123' },
     });
