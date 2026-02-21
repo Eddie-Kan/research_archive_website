@@ -1,0 +1,55 @@
+{
+  "id": "proj-battery-degradation",
+  "type": "project",
+  "title": {
+    "en": "Predicting Lithium-Ion Battery Degradation with Transformer Models",
+    "zh-Hans": "基于Transformer模型的锂离子电池退化预测"
+  },
+  "summary": {
+    "en": "Using attention-based sequence models to predict remaining useful life of lithium-ion batteries from early-cycle charging data.",
+    "zh-Hans": "利用基于注意力机制的序列模型，从早期循环充电数据预测锂离子电池的剩余使用寿命。"
+  },
+  "created_at": "2024-08-01T09:00:00Z",
+  "updated_at": "2025-02-10T11:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["battery", "transformer", "degradation", "RUL-prediction", "time-series"],
+  "links": [],
+  "authorship": {
+    "owner_role": "lead-researcher",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/projects/proj-battery-degradation.json"
+  },
+  "project_kind": "applied-research",
+  "research_area": "AI × Materials Science",
+  "problem_statement": {
+    "en": "Battery degradation is nonlinear and depends on complex electrochemical processes. Accurate early prediction of remaining useful life is critical for EV fleet management and grid storage.",
+    "zh-Hans": "电池退化是非线性的，取决于复杂的电化学过程。准确的剩余使用寿命早期预测对电动车队管理和电网储能至关重要。"
+  },
+  "contributions": {
+    "en": "Temporal attention mechanism for charge-discharge curve encoding; transfer learning from simulation to real-world cycling data.",
+    "zh-Hans": "用于充放电曲线编码的时间注意力机制；从仿真到真实循环数据的迁移学习。"
+  },
+  "methods": ["method-gnn"],
+  "material_systems": ["mat-licoo2-cathode"],
+  "key_results": [
+    {
+      "metric": "RUL prediction MAPE",
+      "value": "8.2%",
+      "context": { "en": "Using first 100 cycles only", "zh-Hans": "仅使用前100个循环" }
+    }
+  ],
+  "timeline": {
+    "start_date": "2024-08-01"
+  },
+  "artifacts": {
+    "repos": [],
+    "datasets": ["ds-battery-cycling"],
+    "experiments": [],
+    "publications": ["pub-battery-transformer"],
+    "notes": []
+  }
+}

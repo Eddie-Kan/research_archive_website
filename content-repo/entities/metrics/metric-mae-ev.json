@@ -1,0 +1,28 @@
+{
+  "id": "metric-mae-ev",
+  "type": "metric",
+  "title": {
+    "en": "Mean Absolute Error (eV/atom)",
+    "zh-Hans": "平均绝对误差（eV/atom）"
+  },
+  "summary": {
+    "en": "Standard metric for evaluating energy prediction accuracy in materials science ML models.",
+    "zh-Hans": "评估材料科学ML模型能量预测精度的标准指标。"
+  },
+  "created_at": "2024-03-01T10:00:00Z",
+  "updated_at": "2024-03-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["metric", "energy-prediction", "evaluation"],
+  "links": [],
+  "authorship": { "owner_role": "author", "contributors": [] },
+  "source_of_truth": { "kind": "file", "pointer": "content-repo/entities/metrics/metric-mae-ev.json" },
+  "name": { "en": "MAE (eV/atom)", "zh-Hans": "MAE（eV/atom）" },
+  "definition": {
+    "en": "Mean absolute error of predicted formation energy per atom compared to DFT reference values.",
+    "zh-Hans": "预测的每原子形成能与DFT参考值相比的平均绝对误差。"
+  },
+  "unit": "eV/atom",
+  "higher_is_better": false,
+  "references": ["https://doi.org/10.1038/s41524-020-00440-1"]
+}

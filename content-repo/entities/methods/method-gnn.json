@@ -1,0 +1,36 @@
+{
+  "id": "method-gnn",
+  "type": "method",
+  "title": {
+    "en": "Graph Neural Networks for Crystal Structures",
+    "zh-Hans": "晶体结构的图神经网络"
+  },
+  "summary": {
+    "en": "Message-passing neural networks that operate on crystal graph representations for property prediction.",
+    "zh-Hans": "在晶体图表示上运行的消息传递神经网络，用于性能预测。"
+  },
+  "created_at": "2024-03-01T10:00:00Z",
+  "updated_at": "2024-12-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["GNN", "message-passing", "crystal-graph", "deep-learning"],
+  "links": [],
+  "authorship": {
+    "owner_role": "author",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/methods/method-gnn.json"
+  },
+  "name": {
+    "en": "Graph Neural Networks",
+    "zh-Hans": "图神经网络"
+  },
+  "domain": "materials-informatics",
+  "description": {
+    "en": "GNNs encode crystal structures as graphs where atoms are nodes and bonds are edges. Message-passing layers aggregate neighbor information to learn atomic representations. Variants include CGCNN, MEGNet, and our CrystalGNN.",
+    "zh-Hans": "GNN将晶体结构编码为图，其中原子为节点，化学键为边。消息传递层聚合邻居信息以学习原子表示。变体包括CGCNN、MEGNet和我们的CrystalGNN。"
+  },
+  "canonical_refs": ["https://doi.org/10.1103/PhysRevLett.120.145301"]
+}

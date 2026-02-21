@@ -1,0 +1,23 @@
+{
+  "id": "collab-zhang-wei",
+  "type": "collaborator",
+  "title": {
+    "en": "Zhang Wei — Computational Materials Scientist",
+    "zh-Hans": "张伟 — 计算材料科学家"
+  },
+  "summary": {
+    "en": "Postdoctoral researcher specializing in DFT calculations and crystal structure prediction.",
+    "zh-Hans": "专注于DFT计算和晶体结构预测的博士后研究员。"
+  },
+  "created_at": "2024-03-01T10:00:00Z",
+  "updated_at": "2024-12-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["DFT", "crystal-structure", "collaborator"],
+  "links": { "website": "https://example.edu/~zhangwei" },
+  "authorship": { "owner_role": "author", "contributors": [] },
+  "source_of_truth": { "kind": "file", "pointer": "content-repo/entities/collaborators/collab-zhang-wei.json" },
+  "name": "Zhang Wei",
+  "role": "postdoc",
+  "affiliation": "inst-tsinghua-mse"
+}

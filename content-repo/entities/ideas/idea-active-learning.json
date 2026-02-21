@@ -1,0 +1,43 @@
+{
+  "id": "idea-active-learning",
+  "type": "idea",
+  "title": {
+    "en": "Active Learning Loop for Experimental Validation",
+    "zh-Hans": "实验验证的主动学习循环"
+  },
+  "summary": {
+    "en": "Build a closed-loop system where ML models suggest the most informative experiments to run next, reducing total experimental cost.",
+    "zh-Hans": "构建一个闭环系统，ML模型建议下一步最有信息量的实验，减少总实验成本。"
+  },
+  "created_at": "2025-02-01T10:00:00Z",
+  "updated_at": "2025-02-10T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["active-learning", "experiment-design", "closed-loop", "uncertainty"],
+  "links": [],
+  "authorship": {
+    "owner_role": "author",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/ideas/idea-active-learning.json"
+  },
+  "idea_kind": "methodology",
+  "problem": {
+    "en": "Experimental validation of ML predictions is expensive. Random selection of candidates to validate wastes resources on uninformative experiments.",
+    "zh-Hans": "ML预测的实验验证成本高昂。随机选择候选材料进行验证会在无信息量的实验上浪费资源。"
+  },
+  "proposed_approach": {
+    "en": "Use epistemic uncertainty from ensemble GNNs to select candidates at the decision boundary. Implement a Bayesian active learning framework that maximizes information gain per experiment.",
+    "zh-Hans": "使用集成GNN的认知不确定性选择决策边界上的候选材料。实现贝叶斯主动学习框架，最大化每次实验的信息增益。"
+  },
+  "expected_value": {
+    "impact": 8,
+    "novelty": 6,
+    "feasibility": 7,
+    "learning_value": 8
+  },
+  "dependencies": ["ml-crystal-gnn-v2"],
+  "idea_status": "new"
+}

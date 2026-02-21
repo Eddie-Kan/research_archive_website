@@ -1,0 +1,46 @@
+{
+  "id": "ds-battery-cycling",
+  "type": "dataset",
+  "title": {
+    "en": "Lithium-Ion Battery Cycling Dataset",
+    "zh-Hans": "锂离子电池循环数据集"
+  },
+  "summary": {
+    "en": "Charge-discharge cycling data for 124 commercial LiCoO2/graphite cells tested under various fast-charging protocols.",
+    "zh-Hans": "124个商用LiCoO2/石墨电池在不同快充协议下的充放电循环数据。"
+  },
+  "created_at": "2024-08-15T10:00:00Z",
+  "updated_at": "2025-01-01T10:00:00Z",
+  "status": "completed",
+  "visibility": "public",
+  "tags": ["battery", "cycling-data", "LiCoO2", "fast-charging", "degradation"],
+  "links": [],
+  "authorship": {
+    "owner_role": "curator",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/datasets/ds-battery-cycling.json"
+  },
+  "dataset_kind": "experimental",
+  "description": {
+    "en": "Extended version of the MIT-Stanford battery dataset with additional cells tested under extreme fast-charging conditions. Includes voltage, current, temperature, and capacity measurements for each cycle.",
+    "zh-Hans": "MIT-Stanford电池数据集的扩展版本，增加了在极端快充条件下测试的电池。包括每个循环的电压、电流、温度和容量测量。"
+  },
+  "schema_def": {
+    "columns": ["cell_id", "cycle_number", "charge_policy", "voltage_V", "current_A", "temperature_C", "capacity_Ah"],
+    "types": ["string", "int", "string", "array<float>", "array<float>", "array<float>", "float"]
+  },
+  "license": "CC-BY-4.0",
+  "provenance": {
+    "source": "MIT-Stanford battery dataset + in-house testing",
+    "transformations": ["format-standardization", "outlier-removal", "interpolation"]
+  },
+  "storage": {
+    "location": "data/datasets/battery-cycling-v1.hdf5",
+    "format": "HDF5",
+    "size_bytes": 2100000000,
+    "checksum": "sha256:f7e8d9c0b1a2..."
+  }
+}

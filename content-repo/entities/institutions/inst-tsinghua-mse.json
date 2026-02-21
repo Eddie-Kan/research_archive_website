@@ -1,0 +1,24 @@
+{
+  "id": "inst-tsinghua-mse",
+  "type": "institution",
+  "title": {
+    "en": "Tsinghua University — School of Materials Science",
+    "zh-Hans": "清华大学 — 材料科学与工程学院"
+  },
+  "summary": {
+    "en": "Leading materials science department in China with strong computational materials research groups.",
+    "zh-Hans": "中国领先的材料科学系，拥有强大的计算材料研究团队。"
+  },
+  "created_at": "2024-03-01T10:00:00Z",
+  "updated_at": "2024-03-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["university", "materials-science", "China"],
+  "links": [],
+  "authorship": { "owner_role": "author", "contributors": [] },
+  "source_of_truth": { "kind": "file", "pointer": "content-repo/entities/institutions/inst-tsinghua-mse.json" },
+  "name": "Tsinghua University",
+  "location": "Beijing, China",
+  "department": "School of Materials Science and Engineering",
+  "website": "https://www.mse.tsinghua.edu.cn"
+}

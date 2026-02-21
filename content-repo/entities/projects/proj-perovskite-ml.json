@@ -1,0 +1,70 @@
+{
+  "id": "proj-perovskite-ml",
+  "type": "project",
+  "title": {
+    "en": "Machine Learning for Perovskite Solar Cell Optimization",
+    "zh-Hans": "钙钛矿太阳能电池优化的机器学习方法"
+  },
+  "summary": {
+    "en": "Developing graph neural network models to predict perovskite crystal stability and optimize composition for photovoltaic applications.",
+    "zh-Hans": "开发图神经网络模型，预测钙钛矿晶体稳定性并优化光伏应用的组分配比。"
+  },
+  "created_at": "2024-03-15T10:00:00Z",
+  "updated_at": "2025-01-20T14:30:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["perovskite", "GNN", "solar-cell", "crystal-stability", "materials-informatics"],
+  "links": ["https://github.com/example/perovskite-ml"],
+  "authorship": {
+    "owner_role": "lead-researcher",
+    "contributors": ["collab-zhang-wei"]
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/projects/proj-perovskite-ml.json"
+  },
+  "project_kind": "applied-research",
+  "research_area": "AI × Materials Science",
+  "problem_statement": {
+    "en": "Traditional trial-and-error approaches to perovskite composition optimization are slow and expensive. We need data-driven methods to accelerate the discovery of stable, high-efficiency perovskite formulations.",
+    "zh-Hans": "传统的钙钛矿组分优化试错方法耗时且昂贵。我们需要数据驱动的方法来加速发现稳定、高效的钙钛矿配方。"
+  },
+  "contributions": {
+    "en": "Novel GNN architecture for crystal graph representation; curated dataset of 12,000+ perovskite structures; Bayesian optimization pipeline for composition search.",
+    "zh-Hans": "新型晶体图表示GNN架构；包含12,000+钙钛矿结构的精选数据集；用于组分搜索的贝叶斯优化管线。"
+  },
+  "methods": ["method-gnn", "method-bayesian-opt"],
+  "material_systems": ["mat-perovskite-abx3"],
+  "key_results": [
+    {
+      "metric": "Stability prediction MAE",
+      "value": 0.043,
+      "unit": "eV/atom",
+      "context": { "en": "On held-out test set", "zh-Hans": "在保留测试集上" }
+    },
+    {
+      "metric": "Composition search speedup",
+      "value": "15x",
+      "context": { "en": "vs. random search baseline", "zh-Hans": "相比随机搜索基线" }
+    }
+  ],
+  "timeline": {
+    "start_date": "2024-03-01",
+    "end_date": "2025-06-30"
+  },
+  "artifacts": {
+    "repos": [],
+    "datasets": ["ds-perovskite-structures"],
+    "experiments": ["exp-thermal-stability", "exp-composition-screen"],
+    "publications": ["pub-crystal-gnn"],
+    "notes": ["note-synthesis-protocol"]
+  },
+  "headline": {
+    "en": "Accelerating perovskite discovery with graph neural networks",
+    "zh-Hans": "利用图神经网络加速钙钛矿发现"
+  },
+  "impact_story": {
+    "en": "This project reduced the experimental screening cycle from months to days by predicting stable compositions before synthesis.",
+    "zh-Hans": "该项目通过在合成前预测稳定组分，将实验筛选周期从数月缩短至数天。"
+  }
+}

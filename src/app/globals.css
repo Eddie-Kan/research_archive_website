@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-0: #ffffff;
+  --surface-1: #f8f9fa;
+  --surface-2: #f0f1f3;
+  --surface-3: #e4e6e9;
+}
+
+.dark {
+  --surface-0: #0f1117;
+  --surface-1: #1a1d27;
+  --surface-2: #242836;
+  --surface-3: #2e3345;
+}
+
+/* Chinese text specific */
+:lang(zh-Hans) {
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* Smooth transitions for language/theme switching */
+.locale-transition {
+  transition: opacity 150ms ease-out;
+}
+
+/* FTS search highlight */
+mark {
+  background-color: #bae0fd;
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.dark mark {
+  background-color: #064f84;
+}
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+  body { font-size: 11pt; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 3px; }
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #0074c5;
+  outline-offset: 2px;
+}

@@ -1,0 +1,30 @@
+---
+entity_id: proj-perovskite-ml
+locale: en
+---
+
+## Overview
+
+This project applies graph neural networks to the challenge of predicting perovskite crystal stability, enabling rapid screening of candidate compositions for solar cell applications.
+
+### Motivation
+
+Traditional approaches to perovskite optimization rely on expensive DFT calculations or physical synthesis and characterization. By training a GNN on existing computational data, we can predict stability for novel compositions in milliseconds rather than hours.
+
+## Key Contributions
+
+1. **CrystalGNN Architecture** — A message-passing neural network with angular edge features that captures the geometric relationships in periodic crystal structures.
+
+2. **Curated Dataset** — 12,847 ABX3 perovskite structures aggregated from Materials Project, OQMD, and our own DFT calculations.
+
+3. **Bayesian Optimization Pipeline** — GNN-guided composition search that finds top candidates 15x faster than random search.
+
+## Results
+
+Our model achieves a mean absolute error of 0.043 eV/atom on formation energy prediction, representing an 18% improvement over prior methods. The Bayesian optimization pipeline identified 3 novel stable compositions that were subsequently validated by DFT.
+
+## Next Steps
+
+- Extend to double perovskites (A2BB'X6)
+- Incorporate experimental synthesis feasibility constraints
+- Explore [[idea-transfer-learning|transfer learning]] from large-scale pre-training

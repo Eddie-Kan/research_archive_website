@@ -1,0 +1,49 @@
+{
+  "id": "exp-composition-screen",
+  "type": "experiment",
+  "title": {
+    "en": "Bayesian Optimization for Perovskite Composition Search",
+    "zh-Hans": "钙钛矿组分搜索的贝叶斯优化"
+  },
+  "summary": {
+    "en": "Using GNN-guided Bayesian optimization to efficiently search the perovskite composition space for stable, high-bandgap candidates.",
+    "zh-Hans": "使用GNN引导的贝叶斯优化高效搜索钙钛矿组分空间，寻找稳定的高带隙候选材料。"
+  },
+  "created_at": "2024-09-15T10:00:00Z",
+  "updated_at": "2025-01-10T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["bayesian-optimization", "perovskite", "composition-search"],
+  "links": [],
+  "authorship": {
+    "owner_role": "lead-researcher",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/experiments/exp-composition-screen.json"
+  },
+  "experiment_type": "optimization",
+  "hypothesis": {
+    "en": "GNN-surrogate Bayesian optimization finds top-10% stable compositions in fewer than 50 evaluations, compared to 500+ for random search.",
+    "zh-Hans": "GNN代理贝叶斯优化在少于50次评估中找到前10%稳定组分，而随机搜索需要500+次。"
+  },
+  "protocol": {
+    "en": "1. Define composition space: A(Cs,MA,FA) B(Pb,Sn) X(I,Br,Cl)\n2. Use CrystalGNN as surrogate model\n3. Run BO with Expected Improvement acquisition\n4. Validate top candidates with DFT",
+    "zh-Hans": "1. 定义组分空间：A(Cs,MA,FA) B(Pb,Sn) X(I,Br,Cl)\n2. 使用CrystalGNN作为代理模型\n3. 使用期望改进采集函数运行BO\n4. 用DFT验证最佳候选"
+  },
+  "inputs": ["ds-perovskite-structures"],
+  "outputs": [],
+  "run_registry": [],
+  "results": [
+    {
+      "metric": "Evaluations to find top-10%",
+      "value": 32,
+      "context": {"en": "vs. 500+ for random search", "zh-Hans": "相比随机搜索的500+次"}
+    }
+  ],
+  "reproducibility": {
+    "level": "statistical",
+    "seed": 42
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "id": "edge-proj-pub-crystal",
+    "from_id": "proj-perovskite-ml",
+    "to_id": "pub-crystal-gnn",
+    "edge_type": "produced",
+    "created_at": "2024-09-01T10:00:00Z",
+    "label": {
+      "en": "Published from project",
+      "zh-Hans": "项目产出论文"
+    },
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-exp-thermal",
+    "from_id": "proj-perovskite-ml",
+    "to_id": "exp-thermal-stability",
+    "edge_type": "project_contains",
+    "created_at": "2024-06-01T10:00:00Z",
+    "label": {
+      "en": "Experiment within project",
+      "zh-Hans": "项目内实验"
+    },
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-exp-screen",
+    "from_id": "proj-perovskite-ml",
+    "to_id": "exp-composition-screen",
+    "edge_type": "project_contains",
+    "created_at": "2024-09-15T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-ds-perov",
+    "from_id": "proj-perovskite-ml",
+    "to_id": "ds-perovskite-structures",
+    "edge_type": "project_contains",
+    "created_at": "2024-04-01T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-model-gnn",
+    "from_id": "proj-perovskite-ml",
+    "to_id": "ml-crystal-gnn-v2",
+    "edge_type": "produced",
+    "created_at": "2024-07-01T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-note-synth",
+    "from_id": "proj-perovskite-ml",
+    "to_id": "note-synthesis-protocol",
+    "edge_type": "project_contains",
+    "created_at": "2024-05-20T10:00:00Z",
+    "weight": 0.5
+  },
+  {
+    "id": "edge-model-ds-train",
+    "from_id": "ml-crystal-gnn-v2",
+    "to_id": "ds-perovskite-structures",
+    "edge_type": "evaluated_on",
+    "created_at": "2024-11-01T10:00:00Z",
+    "label": {
+      "en": "Trained and evaluated on",
+      "zh-Hans": "训练和评估于"
+    },
+    "weight": 1
+  },
+  {
+    "id": "edge-exp-ds-input",
+    "from_id": "exp-thermal-stability",
+    "to_id": "ds-perovskite-structures",
+    "edge_type": "derived_from",
+    "created_at": "2024-06-01T10:00:00Z",
+    "weight": 0.8
+  },
+  {
+    "id": "edge-pub-cites-method",
+    "from_id": "pub-crystal-gnn",
+    "to_id": "method-gnn",
+    "edge_type": "implements",
+    "created_at": "2024-09-01T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-battery-pub",
+    "from_id": "proj-battery-degradation",
+    "to_id": "pub-battery-transformer",
+    "edge_type": "produced",
+    "created_at": "2025-01-05T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-battery-ds",
+    "from_id": "proj-battery-degradation",
+    "to_id": "ds-battery-cycling",
+    "edge_type": "project_contains",
+    "created_at": "2024-08-15T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-battery-model",
+    "from_id": "proj-battery-degradation",
+    "to_id": "ml-battery-former",
+    "edge_type": "produced",
+    "created_at": "2024-11-01T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-battery-model-ds",
+    "from_id": "ml-battery-former",
+    "to_id": "ds-battery-cycling",
+    "edge_type": "evaluated_on",
+    "created_at": "2025-01-10T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-collab-proj",
+    "from_id": "collab-zhang-wei",
+    "to_id": "proj-perovskite-ml",
+    "edge_type": "collaborates_with",
+    "created_at": "2024-03-15T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-idea-transfer-model",
+    "from_id": "idea-transfer-learning",
+    "to_id": "ml-crystal-gnn-v2",
+    "edge_type": "related_to",
+    "created_at": "2025-01-25T10:00:00Z",
+    "label": {
+      "en": "Builds upon",
+      "zh-Hans": "基于"
+    },
+    "weight": 0.7
+  },
+  {
+    "id": "edge-idea-active-model",
+    "from_id": "idea-active-learning",
+    "to_id": "ml-crystal-gnn-v2",
+    "edge_type": "related_to",
+    "created_at": "2025-02-01T10:00:00Z",
+    "weight": 0.6
+  },
+  {
+    "id": "edge-exp-screen-method",
+    "from_id": "exp-composition-screen",
+    "to_id": "method-bayesian-opt",
+    "edge_type": "implements",
+    "created_at": "2024-09-15T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-mat-perov",
+    "from_id": "proj-perovskite-ml",
+    "to_id": "mat-perovskite-abx3",
+    "edge_type": "related_to",
+    "created_at": "2024-03-15T10:00:00Z",
+    "weight": 1
+  },
+  {
+    "id": "edge-proj-battery-mat",
+    "from_id": "proj-battery-degradation",
+    "to_id": "mat-licoo2-cathode",
+    "edge_type": "related_to",
+    "created_at": "2024-08-01T10:00:00Z",
+    "weight": 1
+  }
+]

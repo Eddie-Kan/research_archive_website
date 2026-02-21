@@ -1,0 +1,39 @@
+{
+  "type": "publication",
+  "title": {
+    "en": "test",
+    "zh-Hans": "测试"
+  },
+  "summary": {
+    "en": "",
+    "zh-Hans": ""
+  },
+  "status": "active",
+  "visibility": "private",
+  "tags": [],
+  "authorship": {
+    "owner_role": "owner",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": ""
+  },
+  "id": "01khqc23qhjpate8xt3qmwjgcj",
+  "created_at": "2026-02-18T03:17:51.985Z",
+  "updated_at": "2026-02-18T03:17:51.985Z",
+  "links": [],
+  "publication_type": "preprint",
+  "venue": {
+    "en": "",
+    "zh-Hans": ""
+  },
+  "date": "",
+  "authors": [],
+  "abstract": {
+    "en": "",
+    "zh-Hans": ""
+  },
+  "identifiers": {},
+  "associated_projects": []
+}

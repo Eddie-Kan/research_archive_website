@@ -1,0 +1,40 @@
+{
+  "id": "pub-battery-transformer",
+  "type": "publication",
+  "title": {
+    "en": "Temporal Attention Networks for Early Battery Degradation Prediction",
+    "zh-Hans": "用于电池早期退化预测的时间注意力网络"
+  },
+  "summary": {
+    "en": "A transformer-based architecture that predicts lithium-ion battery remaining useful life from the first 100 charge-discharge cycles with 8.2% MAPE.",
+    "zh-Hans": "一种基于Transformer的架构，利用前100个充放电循环预测锂离子电池剩余使用寿命，MAPE为8.2%。"
+  },
+  "created_at": "2025-01-05T10:00:00Z",
+  "updated_at": "2025-02-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["battery", "transformer", "degradation", "time-series"],
+  "links": [],
+  "authorship": {
+    "owner_role": "first-author",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/publications/pub-battery-transformer.json"
+  },
+  "publication_type": "journal-article",
+  "venue": {
+    "en": "Journal of Power Sources (under review)",
+    "zh-Hans": "Journal of Power Sources（审稿中）"
+  },
+  "date": "2025-01-15",
+  "authors": ["EK"],
+  "abstract": {
+    "en": "Accurate early prediction of lithium-ion battery degradation is critical for electric vehicle fleet management. We propose BatteryFormer, a temporal attention network that processes charge-discharge voltage curves as sequences. Using only the first 100 cycles, our model predicts end-of-life cycle number with 8.2% mean absolute percentage error on the MIT-Stanford battery dataset.",
+    "zh-Hans": "锂离子电池退化的准确早期预测对电动车队管理至关重要。我们提出BatteryFormer，一种将充放电电压曲线作为序列处理的时间注意力网络。仅使用前100个循环，我们的模型在MIT-Stanford电池数据集上以8.2%的平均绝对百分比误差预测寿命终止循环数。"
+  },
+  "identifiers": {},
+  "associated_projects": ["proj-battery-degradation"],
+  "peer_review_status": "under-review"
+}

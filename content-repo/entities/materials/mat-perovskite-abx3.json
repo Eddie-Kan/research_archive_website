@@ -1,0 +1,24 @@
+{
+  "id": "mat-perovskite-abx3",
+  "type": "material_system",
+  "title": {
+    "en": "ABX3 Perovskite Family",
+    "zh-Hans": "ABX3钙钛矿族"
+  },
+  "summary": {
+    "en": "Halide perovskites with general formula ABX3, where A is a monovalent cation, B is a divalent metal, and X is a halide anion.",
+    "zh-Hans": "通式为ABX3的卤化物钙钛矿，其中A为一价阳离子，B为二价金属，X为卤化物阴离子。"
+  },
+  "created_at": "2024-03-01T10:00:00Z",
+  "updated_at": "2024-12-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["perovskite", "halide", "photovoltaic", "crystal-structure"],
+  "links": [],
+  "authorship": { "owner_role": "author", "contributors": [] },
+  "source_of_truth": { "kind": "file", "pointer": "content-repo/entities/materials/mat-perovskite-abx3.json" },
+  "name": { "en": "ABX3 Perovskite", "zh-Hans": "ABX3钙钛矿" },
+  "composition": "ABX3 (A=Cs/MA/FA, B=Pb/Sn, X=I/Br/Cl)",
+  "structure_type": "perovskite",
+  "domain_tags": ["photovoltaics", "optoelectronics", "energy-materials"]
+}

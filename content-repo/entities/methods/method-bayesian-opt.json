@@ -1,0 +1,27 @@
+{
+  "id": "method-bayesian-opt",
+  "type": "method",
+  "title": {
+    "en": "Bayesian Optimization for Materials Discovery",
+    "zh-Hans": "材料发现的贝叶斯优化"
+  },
+  "summary": {
+    "en": "Sequential model-based optimization using Gaussian processes or neural network surrogates to efficiently explore materials composition spaces.",
+    "zh-Hans": "使用高斯过程或神经网络代理的序贯模型优化，高效探索材料组分空间。"
+  },
+  "created_at": "2024-03-01T10:00:00Z",
+  "updated_at": "2024-12-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["bayesian-optimization", "surrogate-model", "acquisition-function", "materials-discovery"],
+  "links": [],
+  "authorship": { "owner_role": "author", "contributors": [] },
+  "source_of_truth": { "kind": "file", "pointer": "content-repo/entities/methods/method-bayesian-opt.json" },
+  "name": { "en": "Bayesian Optimization", "zh-Hans": "贝叶斯优化" },
+  "domain": "optimization",
+  "description": {
+    "en": "Bayesian optimization builds a probabilistic surrogate model of the objective function and uses an acquisition function (e.g., Expected Improvement) to decide where to sample next. Particularly effective when evaluations are expensive, as in DFT calculations or physical experiments.",
+    "zh-Hans": "贝叶斯优化构建目标函数的概率代理模型，并使用采集函数（如期望改进）决定下一步采样位置。在评估成本高昂时特别有效，如DFT计算或物理实验。"
+  },
+  "canonical_refs": ["https://doi.org/10.1146/annurev-matsci-070218-010015"]
+}

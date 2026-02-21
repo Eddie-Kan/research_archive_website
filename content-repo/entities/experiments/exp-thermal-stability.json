@@ -1,0 +1,63 @@
+{
+  "id": "exp-thermal-stability",
+  "type": "experiment",
+  "title": {
+    "en": "Thermal Stability Screening of CsPbI3 Variants",
+    "zh-Hans": "CsPbI3变体的热稳定性筛选"
+  },
+  "summary": {
+    "en": "Systematic DFT-based screening of 200 CsPbI3 compositional variants to validate GNN stability predictions.",
+    "zh-Hans": "对200种CsPbI3组分变体进行系统的DFT筛选，以验证GNN稳定性预测。"
+  },
+  "created_at": "2024-06-01T10:00:00Z",
+  "updated_at": "2024-11-15T10:00:00Z",
+  "status": "completed",
+  "visibility": "public",
+  "tags": ["DFT", "perovskite", "thermal-stability", "validation"],
+  "links": [],
+  "authorship": {
+    "owner_role": "lead-researcher",
+    "contributors": ["collab-zhang-wei"]
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/experiments/exp-thermal-stability.json"
+  },
+  "experiment_type": "computational-screening",
+  "hypothesis": {
+    "en": "CrystalGNN predictions correlate with DFT-computed decomposition energies (Pearson r > 0.9) for CsPbI3 variants with partial B-site substitution.",
+    "zh-Hans": "CrystalGNN预测与DFT计算的分解能相关（Pearson r > 0.9），适用于部分B位替代的CsPbI3变体。"
+  },
+  "protocol": {
+    "en": "1. Generate 200 CsPb(1-x)M(x)I3 structures (M = Sn, Ge, Bi) via pymatgen\n2. Run DFT relaxation with VASP (PBE+D3, 520 eV cutoff)\n3. Compute decomposition energy relative to competing phases\n4. Compare with CrystalGNN predictions",
+    "zh-Hans": "1. 通过pymatgen生成200个CsPb(1-x)M(x)I3结构（M = Sn, Ge, Bi）\n2. 使用VASP进行DFT弛豫（PBE+D3，520 eV截断能）\n3. 计算相对于竞争相的分解能\n4. 与CrystalGNN预测进行比较"
+  },
+  "inputs": ["ds-perovskite-structures"],
+  "outputs": [],
+  "run_registry": [
+    {
+      "run_id": "run-001",
+      "date": "2024-07-15",
+      "parameters": {"functional": "PBE", "dispersion": "D3", "cutoff_eV": 520},
+      "outputs": {"structures_computed": 200, "converged": 187},
+      "notes": {"en": "13 structures failed to converge", "zh-Hans": "13个结构未能收敛"}
+    }
+  ],
+  "results": [
+    {
+      "metric": "Pearson correlation (GNN vs DFT)",
+      "value": 0.94,
+      "context": {"en": "On 187 converged structures", "zh-Hans": "在187个收敛结构上"}
+    },
+    {
+      "metric": "Spearman rank correlation",
+      "value": 0.91
+    }
+  ],
+  "reproducibility": {
+    "level": "exact",
+    "environment": "VASP 6.3.2, pymatgen 2024.2.8",
+    "seed": 42,
+    "notes": {"en": "All input files archived in dataset", "zh-Hans": "所有输入文件已归档在数据集中"}
+  }
+}

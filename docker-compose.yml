@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./content-repo:/app/content-repo:ro
+      - ./data:/app/data
+      - ./backups:/app/backups
+    environment:
+      - RUNTIME_MODE=local
+      - DATABASE_URL=file:./data/archive.db
+      - CONTENT_REPO_PATH=./content-repo
+      - MEDIA_STORAGE_PATH=./content-repo/media
+      - HOST=0.0.0.0
+      - PORT=3000
+      - SEMANTIC_SEARCH_ENABLED=false
+      - EXPORT_STATIC=false
+      - BACKUP_DIR=./backups
+      - BACKUP_RETENTION_DAILY=30
+      - BACKUP_RETENTION_MONTHLY=12
+    restart: unless-stopped

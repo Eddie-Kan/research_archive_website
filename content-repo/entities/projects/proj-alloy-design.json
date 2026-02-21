@@ -1,0 +1,49 @@
+{
+  "id": "proj-alloy-design",
+  "type": "project",
+  "title": {
+    "en": "Generative Models for High-Entropy Alloy Design",
+    "zh-Hans": "高熵合金设计的生成模型"
+  },
+  "summary": {
+    "en": "Exploring variational autoencoders and diffusion models to generate novel high-entropy alloy compositions with targeted mechanical properties.",
+    "zh-Hans": "探索变分自编码器和扩散模型，生成具有目标力学性能的新型高熵合金组分。"
+  },
+  "created_at": "2025-01-10T08:00:00Z",
+  "updated_at": "2025-02-01T16:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["HEA", "generative-model", "VAE", "diffusion", "alloy-design"],
+  "links": [],
+  "authorship": {
+    "owner_role": "lead-researcher",
+    "contributors": ["collab-zhang-wei"]
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/projects/proj-alloy-design.json"
+  },
+  "project_kind": "exploratory-research",
+  "research_area": "AI × Materials Science",
+  "problem_statement": {
+    "en": "The compositional space of high-entropy alloys is vast and largely unexplored. Generative models can propose promising candidates that satisfy multiple property constraints simultaneously.",
+    "zh-Hans": "高熵合金的组分空间广阔且大部分未被探索。生成模型可以提出同时满足多个性能约束的有前景候选材料。"
+  },
+  "contributions": {
+    "en": "Conditional VAE for multi-objective alloy generation; property-guided diffusion sampling.",
+    "zh-Hans": "用于多目标合金生成的条件VAE；性能引导的扩散采样。"
+  },
+  "methods": ["method-bayesian-opt"],
+  "material_systems": [],
+  "key_results": [],
+  "timeline": {
+    "start_date": "2025-01-10"
+  },
+  "artifacts": {
+    "repos": [],
+    "datasets": [],
+    "experiments": [],
+    "publications": [],
+    "notes": []
+  }
+}

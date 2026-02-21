@@ -1,0 +1,30 @@
+---
+entity_id: pub-crystal-gnn
+locale: en
+---
+
+## Abstract
+
+Predicting the thermodynamic stability of perovskite crystals is essential for accelerating materials discovery. We introduce CrystalGNN, a graph neural network that encodes periodic crystal structures as multi-edge graphs with learnable angular features.
+
+## Method
+
+CrystalGNN represents each crystal as a graph where:
+- **Nodes** correspond to atoms, featurized by element embeddings
+- **Edges** represent bonds within a cutoff radius, with distance and angular features
+- **Message passing** aggregates neighbor information over 3 layers
+
+The model outputs per-atom energies that are summed and normalized to predict formation energy per atom.
+
+## Key Results
+
+On our curated dataset of 12,847 ABX3 perovskites:
+- MAE: 0.043 eV/atom (18% improvement over CGCNN)
+- R²: 0.96
+- Stability classification AUC: 0.98
+
+The model generalizes well to unseen compositions, with only a modest increase in error for out-of-distribution B-site elements.
+
+## Citation
+
+See the [[proj-perovskite-ml|parent project]] for full context.

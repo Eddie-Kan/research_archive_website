@@ -1,0 +1,29 @@
+{
+  "id": "note-synthesis-protocol",
+  "type": "note",
+  "title": {
+    "en": "Perovskite Thin Film Synthesis Protocol Notes",
+    "zh-Hans": "钙钛矿薄膜合成协议笔记"
+  },
+  "summary": {
+    "en": "Detailed notes on the two-step spin-coating synthesis protocol for CsPbI3 thin films, including common failure modes.",
+    "zh-Hans": "关于CsPbI3薄膜两步旋涂合成协议的详细笔记，包括常见失败模式。"
+  },
+  "created_at": "2024-05-20T10:00:00Z",
+  "updated_at": "2024-10-01T10:00:00Z",
+  "status": "completed",
+  "visibility": "public",
+  "tags": ["synthesis", "perovskite", "thin-film", "spin-coating", "protocol"],
+  "links": [],
+  "authorship": {
+    "owner_role": "author",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/notes/note-synthesis-protocol.json"
+  },
+  "note_type": "protocol",
+  "body_mdx_id": "note-synthesis-protocol",
+  "related_entities": ["proj-perovskite-ml", "mat-perovskite-abx3"]
+}

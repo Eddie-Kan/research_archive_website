@@ -1,0 +1,24 @@
+{
+  "id": "mat-licoo2-cathode",
+  "type": "material_system",
+  "title": {
+    "en": "LiCoO2 Layered Cathode",
+    "zh-Hans": "LiCoO2层状正极"
+  },
+  "summary": {
+    "en": "Lithium cobalt oxide layered cathode material widely used in commercial lithium-ion batteries.",
+    "zh-Hans": "广泛用于商用锂离子电池的钴酸锂层状正极材料。"
+  },
+  "created_at": "2024-08-01T10:00:00Z",
+  "updated_at": "2024-12-01T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["cathode", "lithium-ion", "layered-oxide", "battery"],
+  "links": [],
+  "authorship": { "owner_role": "author", "contributors": [] },
+  "source_of_truth": { "kind": "file", "pointer": "content-repo/entities/materials/mat-licoo2-cathode.json" },
+  "name": { "en": "LiCoO2 Cathode", "zh-Hans": "LiCoO2正极" },
+  "composition": "LiCoO2",
+  "structure_type": "layered-oxide",
+  "domain_tags": ["batteries", "energy-storage", "electrochemistry"]
+}

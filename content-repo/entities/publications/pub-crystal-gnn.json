@@ -1,0 +1,44 @@
+{
+  "id": "pub-crystal-gnn",
+  "type": "publication",
+  "title": {
+    "en": "Crystal Graph Neural Networks for Perovskite Stability Prediction",
+    "zh-Hans": "用于钙钛矿稳定性预测的晶体图神经网络"
+  },
+  "summary": {
+    "en": "We propose CrystalGNN, a message-passing neural network operating on periodic crystal graphs, achieving state-of-the-art stability prediction for ABX3 perovskites.",
+    "zh-Hans": "我们提出CrystalGNN，一种在周期性晶体图上运行的消息传递神经网络，实现了ABX3钙钛矿稳定性预测的最先进水平。"
+  },
+  "created_at": "2024-09-01T10:00:00Z",
+  "updated_at": "2025-01-15T09:00:00Z",
+  "status": "completed",
+  "visibility": "public",
+  "tags": ["GNN", "perovskite", "crystal-structure", "stability-prediction"],
+  "links": ["https://arxiv.org/abs/2024.xxxxx"],
+  "authorship": {
+    "owner_role": "first-author",
+    "contributors": ["collab-zhang-wei"]
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/publications/pub-crystal-gnn.json"
+  },
+  "publication_type": "conference-paper",
+  "venue": {
+    "en": "NeurIPS 2024 Workshop on AI for Science",
+    "zh-Hans": "NeurIPS 2024 AI for Science研讨会"
+  },
+  "date": "2024-12-10",
+  "authors": ["EK", "Zhang Wei", "Li Mei"],
+  "abstract": {
+    "en": "Predicting the thermodynamic stability of perovskite crystals is essential for accelerating materials discovery. We introduce CrystalGNN, a graph neural network that encodes periodic crystal structures as multi-edge graphs with learnable angular features. On a curated dataset of 12,847 ABX3 perovskites, CrystalGNN achieves a mean absolute error of 0.043 eV/atom for formation energy prediction, outperforming existing methods by 18%.",
+    "zh-Hans": "预测钙钛矿晶体的热力学稳定性对于加速材料发现至关重要。我们引入CrystalGNN，一种将周期性晶体结构编码为具有可学习角度特征的多边图的图神经网络。在包含12,847个ABX3钙钛矿的精选数据集上，CrystalGNN在形成能预测方面实现了0.043 eV/atom的平均绝对误差，比现有方法提高了18%。"
+  },
+  "identifiers": {
+    "doi": "10.xxxx/neurips2024.xxxxx",
+    "arxiv": "2024.xxxxx"
+  },
+  "associated_projects": ["proj-perovskite-ml"],
+  "bibtex": "@inproceedings{ek2024crystalgnn,\n  title={Crystal Graph Neural Networks for Perovskite Stability Prediction},\n  author={EK and Zhang, Wei and Li, Mei},\n  booktitle={NeurIPS 2024 Workshop on AI for Science},\n  year={2024}\n}",
+  "peer_review_status": "accepted"
+}

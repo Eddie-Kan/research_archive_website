@@ -1,0 +1,43 @@
+{
+  "id": "idea-transfer-learning",
+  "type": "idea",
+  "title": {
+    "en": "Cross-Domain Transfer Learning for Materials Property Prediction",
+    "zh-Hans": "材料性能预测的跨域迁移学习"
+  },
+  "summary": {
+    "en": "Pre-train a universal crystal encoder on large-scale DFT data, then fine-tune for specific property prediction tasks with limited labeled data.",
+    "zh-Hans": "在大规模DFT数据上预训练通用晶体编码器，然后在有限标注数据上微调用于特定性能预测任务。"
+  },
+  "created_at": "2025-01-25T10:00:00Z",
+  "updated_at": "2025-02-05T10:00:00Z",
+  "status": "active",
+  "visibility": "public",
+  "tags": ["transfer-learning", "pre-training", "foundation-model", "materials"],
+  "links": [],
+  "authorship": {
+    "owner_role": "author",
+    "contributors": []
+  },
+  "source_of_truth": {
+    "kind": "file",
+    "pointer": "content-repo/entities/ideas/idea-transfer-learning.json"
+  },
+  "idea_kind": "research-direction",
+  "problem": {
+    "en": "Most materials ML models are trained from scratch for each property, wasting the shared structural knowledge across tasks. A pre-trained encoder could dramatically reduce data requirements.",
+    "zh-Hans": "大多数材料ML模型针对每个性能从头训练，浪费了跨任务的共享结构知识。预训练编码器可以大幅减少数据需求。"
+  },
+  "proposed_approach": {
+    "en": "1. Collect 1M+ crystal structures from Materials Project and AFLOW\n2. Pre-train with masked atom prediction and energy contrastive loss\n3. Fine-tune on downstream tasks (band gap, stability, elasticity)\n4. Benchmark against task-specific models",
+    "zh-Hans": "1. 从Materials Project和AFLOW收集100万+晶体结构\n2. 使用掩码原子预测和能量对比损失进行预训练\n3. 在下游任务（带隙、稳定性、弹性）上微调\n4. 与任务特定模型进行基准测试"
+  },
+  "expected_value": {
+    "impact": 9,
+    "novelty": 7,
+    "feasibility": 6,
+    "learning_value": 9
+  },
+  "dependencies": ["ds-perovskite-structures", "ml-crystal-gnn-v2"],
+  "idea_status": "exploring"
+}
