@@ -24,7 +24,7 @@ test.describe('Sidebar auth visibility — logged out', () => {
 
     // Should NOT show admin nav items
     for (const label of ADMIN_NAV_TEXTS_EN) {
-      await expect(sidebar.locator(`text=${label}`)).not.toBeVisible();
+      await expect(sidebar.getByText(label, { exact: true })).not.toBeVisible();
     }
 
     // Should NOT show "Logout" button
@@ -91,7 +91,7 @@ test.describe('Sidebar auth visibility — logged in', () => {
 
     // Should show admin nav items
     for (const label of ADMIN_NAV_TEXTS_EN) {
-      await expect(sidebar.locator(`text=${label}`)).toBeVisible();
+      await expect(sidebar.getByText(label, { exact: true })).toBeVisible();
     }
 
     // Should show "Logout" button

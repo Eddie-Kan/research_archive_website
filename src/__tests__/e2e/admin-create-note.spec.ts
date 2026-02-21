@@ -60,10 +60,11 @@ test.describe('Admin Create Note — happy path', () => {
     const entityId = idMatch![1];
 
     // Fetch the entity via API and verify defaults were applied
-    const entityRes = await page.request.get(`/api/admin/entities/${entityId}`);
-    expect(entityRes.ok()).toBe(true);
-
-    const entity = await entityRes.json();
+    const entity = await page.evaluate(async (id) => {
+      const res = await fetch(`/api/admin/entities/${id}`);
+      if (!res.ok) throw new Error(`GET entity failed: ${res.status}`);
+      return res.json();
+    }, entityId);
 
     // Verify auto-populated defaults
     expect(entity.type).toBe('note');
@@ -79,6 +80,8 @@ test.describe('Admin Create Note — happy path', () => {
     expect(entity.body_mdx_id).toBe(`${entityId}.body`);
 
     // Clean up: delete the test entity
-    await page.request.delete(`/api/admin/entities/${entityId}`);
+    await page.evaluate(async (id) => {
+      await fetch(`/api/admin/entities/${id}`, { method: 'DELETE' });
+    }, entityId);
   });
 });
