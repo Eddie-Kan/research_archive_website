@@ -97,23 +97,42 @@ export function validateAll(contentDir: string): BulkValidationReport {
       continue;
     }
 
-    // Determine if this is an edge file or entity file based on presence of edge_type
-    const obj = data as Record<string, unknown>;
-    if (typeof obj.edge_type === 'string' || typeof obj.from_id === 'string') {
-      const result = validateEdge(data);
-      if (result.success) {
-        report.valid++;
-      } else {
+    // Handle arrays (e.g. edges.json contains an array of edges)
+    if (Array.isArray(data)) {
+      const fileErrors: string[] = [];
+      for (let i = 0; i < data.length; i++) {
+        const result = validateEdge(data[i]);
+        if (!result.success) {
+          for (const err of result.errors!) {
+            fileErrors.push(`[${i}] ${err}`);
+          }
+        }
+      }
+      if (fileErrors.length > 0) {
         report.invalid++;
-        report.errors.push({ file, errors: result.errors! });
+        report.errors.push({ file, errors: fileErrors });
+      } else {
+        report.valid++;
       }
     } else {
-      const result = validateEntity(data);
-      if (result.success) {
-        report.valid++;
+      // Determine if this is an edge file or entity file based on presence of edge_type
+      const obj = data as Record<string, unknown>;
+      if (typeof obj.edge_type === 'string' || typeof obj.from_id === 'string') {
+        const result = validateEdge(data);
+        if (result.success) {
+          report.valid++;
+        } else {
+          report.invalid++;
+          report.errors.push({ file, errors: result.errors! });
+        }
       } else {
-        report.invalid++;
-        report.errors.push({ file, errors: result.errors! });
+        const result = validateEntity(data);
+        if (result.success) {
+          report.valid++;
+        } else {
+          report.invalid++;
+          report.errors.push({ file, errors: result.errors! });
+        }
       }
     }
   }

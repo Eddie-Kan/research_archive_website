@@ -61,7 +61,7 @@ yarn-error.log*
 .vercel
 
 # Export artifacts
-export/
+/export/
 static-export/
 *.tar.gz
 *.zip
